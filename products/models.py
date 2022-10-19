@@ -7,6 +7,9 @@ class Tag(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        db_table = "tags"
+
 
 class Product(models.Model):
     name = models.CharField("상품명", max_length=100)
@@ -14,6 +17,9 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        db_table = "products"
 
 
 class ProductOption(models.Model):
@@ -29,3 +35,6 @@ class ProductOption(models.Model):
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        db_table = "products_options"

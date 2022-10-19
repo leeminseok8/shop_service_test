@@ -12,6 +12,7 @@ python-dotenv = "*"
 black = "*"
 isort = "*"
 pre-commit = "*"
+drf-yasg = "*"
 
 [dev-packages]
 
