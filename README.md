@@ -13,7 +13,7 @@
 
 ---
 
-## 1. 사용법
+## 사용법
 > 명령어를 순서대로 입력하세요.
 
 <br>
@@ -77,7 +77,7 @@ Swagger
 
 ---
 
-## 2. 사용 기술 스택
+## 사용 기술 스택
 - Back-end : Python, Django, DjangoRestFramework
 
 - DataBase : MySQL
@@ -90,8 +90,8 @@ Swagger
 
 ---
 
-## 3. MVP Service
-> 중첩 구조의 데이터를 한 번의 요청으로 처리하도록 구현하였습니다.
+## MVP Service
+
 ### 상품
 - 생성
     - 상품 및 옵션을 생성합니다.
@@ -108,7 +108,7 @@ Swagger
 
 ---
 
-## 4. API 명세서
+## API 명세서
 | Domain | endpoint | Method | 기능 | 권한 |
 | --- | --- | --- | --- | --- |
 | **Product** |products/ | POST | 상품 생성 | - |
@@ -123,13 +123,13 @@ Swagger
 
 ---
 
-## 5. 요구사항 및 기능 명세서
+## 요구사항 및 기능 명세서
 
 ### Django Rest Framework
 
 - WritableNestedModelSerializer
 <img width="1208" alt="스크린샷 2022-10-20 오후 6 53 16" src="https://user-images.githubusercontent.com/93478318/196917389-cf769947-ed2f-4ff1-92e1-d338502a3229.png">
-    - WritableNestedModelSerializer를 사용하여 별도의 오버라이드 없이 중첩구조 데이터의 create, update 요청을 처리하였습니다.
+    - WritableNestedModelSerializer를 사용하여 중첩구조 데이터를 오버라이드 없이 한 번의 요청으로 처리하였습니다.
 
 - 문서화
     - drf-yasg를 사용한 문서화를 작성하였습니다.
@@ -147,10 +147,12 @@ Swagger
 
     - 최적화 후
     <img width="1195" alt="스크린샷 2022-10-18 오후 11 31 50" src="https://user-images.githubusercontent.com/93478318/196922160-830ac01b-9ff4-4149-afb4-fc9d0476176d.png">
-    같은 요청 시 쿼리입니다. 상품이 2개일 경우 3번의 쿼리를 호출합니다. 상품 개수 당 2번의 쿼리를 줄일 수 있습니다.
+    같은 요청 시 쿼리입니다. 상품이 2개일 경우 3번의 쿼리를 호출합니다. 상품 개수 당 2번의 쿼리를 줄였습니다.
 
+<br>
 
-<!-- ### Docker -->
+### Docker(서버 접근 에러)
+- Dockerfile, docker-compose.yml를 사용하여 이미지 생성과 컨테이너를 띄웠으나 서버 접근 에러가 발생하여 develop 브랜치까지만 푸시하였습니다.
 
 <br>
 
