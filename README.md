@@ -63,13 +63,13 @@ pipenv가 존재하는 경우
 > python manage.py runserver
 ```
 
-### Postman Export & Swagger
+### Document
 
 Postman Export file
 - 프로젝트 최상위 디렉토리의 "Shop.postman_collection" 파일입니다.
 
 Swagger
-- 서버 실행 후 <a href="http://127.0.0.1:8000/doc/">http://127.0.0.1:8000/doc/</a> 
+- 서버 실행 후 <a href="http://127.0.0.1:8000/doc/">http://127.0.0.1:8000/doc/</a> 에 접속하세요.
 
 
 
@@ -137,36 +137,24 @@ Swagger
     - Postman Export를 제출하였습니다.
         - 파일 이름은 **Shop.postman_collection** 입니다.
 
-### 투자 화면 조회
-<img width="957" alt="스크린샷 2022-09-28 오후 6 36 11" src="https://user-images.githubusercontent.com/93478318/192745160-8a6eb188-ced0-472b-a2b3-81931fc9b9c7.png">
+<br>
 
-- 총 자산(total_asset)은 테이블 컬럼이 아닌 함수로 구현하여 return에 담아 응답하였습니다.
+### Django
+- ORM 쿼리 최적화
+    - 최적화 전
+    <img width="1185" alt="스크린샷 2022-10-18 오후 11 30 57" src="https://user-images.githubusercontent.com/93478318/196922245-9a7dd8af-5004-4f77-b368-ab3e53edcfd2.png">
+    전체 상품 조회 시 쿼리입니다. 상품이 2개일 경우 총 5번의 쿼리를 호출합니다.
 
-- 총 자산을 구현할 때 보유 종목(Stock 테이블)의 현금 컬럼을 어떻게 정의해야 하는지 고민했습니다. 현재는 보유 종목 테이블에 정의했지만, 이후 계좌(Account) 테이블 컬럼으로 마이그레이션할 예정입니다.
-(**입금 시 현금으로 추가하여 자산을 계산해야 하기 때문**)
+    - 최적화 후
+    <img width="1195" alt="스크린샷 2022-10-18 오후 11 31 50" src="https://user-images.githubusercontent.com/93478318/196922160-830ac01b-9ff4-4149-afb4-fc9d0476176d.png">
+    같은 요청 시 쿼리입니다. 상품이 2개일 경우 3번의 쿼리를 호출합니다. 상품 개수 당 2번의 쿼리를 줄일 수 있습니다.
 
-- 하루의 특정 시간( 예를 들어, 24시 ~ 24시 30분 )을 선정하여 한 번에 처리할 수 있도록 캐싱(redis)하는 방법으로 추가 구현을 예상하고 있습니다.
 
-### 투자 상세 화면 조회
-<img width="963" alt="스크린샷 2022-09-28 오후 6 35 39" src="https://user-images.githubusercontent.com/93478318/192745057-ee297af0-999e-4d92-b694-4a0367635ae7.png">
+<!-- ### Docker -->
 
-- 총 자산(total_asset)과 같이 총 수익(Total_proceed), 수익률(yeild)은 함수로 구현하였습니다.
+<br>
 
-### 보유 종목 화면 조회
-<img width="965" alt="스크린샷 2022-09-28 오후 6 37 20" src="https://user-images.githubusercontent.com/93478318/192745399-13b0c17d-6e72-44e9-9839-34466254f1da.png">
-
-- 로그인 유저 인증 후 참조하는(fk) 계좌의 보유 종목을 호출합니다.
-
-### 입금 계좌 검증
-<img width="964" alt="스크린샷 2022-09-28 오후 6 38 23" src="https://user-images.githubusercontent.com/93478318/192745653-7a751223-5a46-4716-8c70-f7ebb04b727a.png">
-
-- 유저, 계좌 검증을 구현하였습니다.
-
-- 기존 요청 예시값으로는 [유저 이름, 계좌 번호, 입금 금액]을 JSON으로 받았습니다. 하지만 이 경우, http method를 POST로 받아야 하여 테이블 컬럼이 중복되는 상황, 즉 정규화가 필요합니다. 이 부분에서 **역정규화하여 진행할 지 정규화하여 진행할 지 고민끝에 개명할 경우를 대비하여 정규화하여 진행하였습니다.**
-
-### 계좌 자산 업데이트
-<img width="961" alt="스크린샷 2022-09-28 오후 6 39 37" src="https://user-images.githubusercontent.com/93478318/192745904-ee349ae0-774e-437e-b9fc-ce3a5855c740.png">
-
-- 검증 완료 후 검증된 데이터로 hashing하고 클라이언트에서 요청하면 DB의 데이터와 대조하여 실제 계좌를 업데이트합니다.
-
-- [투자 화면 조회](#투자-화면-조회)의 총 자산을 구현할 때 고민한 것처럼 Stock 테이블의 현금 컬럼을 업데이트하는 방향으로 구현할 예정입니다. 총 자산뿐만 아닌 현금 자산과 함께 업데이트하도록 분석하였습니다.
+### 커밋 컨벤션
+- Feat: 기능 추가
+- Modify: 코드 수정
+- etc: 기능 외 기타 코드
