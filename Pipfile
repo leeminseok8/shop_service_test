@@ -12,11 +12,15 @@ python-dotenv = "*"
 black = "*"
 isort = "*"
 pre-commit = "*"
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 drf-yasg = "*"
 pytest = "*"
 >>>>>>> Stashed changes
+=======
+drf-yasg = "*"
+>>>>>>> edd08327c56912cb430f326f84649da5c8e41da2
 
 [dev-packages]
 
