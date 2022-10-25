@@ -1,15 +1,7 @@
 {
     "_meta": {
         "hash": {
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-            "sha256": "8942f4b809d8c03fe6e661a7f256aef1b1818d9e6b4b1153877a4bab9c8f22a7"
-=======
-            "sha256": "685e30147caaa34b16bd0bd1c1b8bce0d16edd1fc6f34fa1956a37d45d047017"
->>>>>>> Stashed changes
-=======
             "sha256": "885200e8d7a37135acf7e282dca51756b8031d31dcc99b72bbd229fd71700cc7"
->>>>>>> edd08327c56912cb430f326f84649da5c8e41da2
         },
         "pipfile-spec": 6,
         "requires": {
@@ -159,11 +151,6 @@
             "markers": "python_version >= '3.7'",
             "version": "==2.5.6"
         },
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> edd08327c56912cb430f326f84649da5c8e41da2
         "idna": {
             "hashes": [
                 "sha256:814f528e8dead7d329833b91c5faa87d60bf71824cd12a7530b5526063d02cb4",
@@ -180,17 +167,6 @@
             "markers": "python_version >= '3.5'",
             "version": "==0.5.1"
         },
-<<<<<<< HEAD
-        "iniconfig": {
-            "hashes": [
-                "sha256:011e24c64b7f47f6ebd835bb12a743f2fbe9a26d4cecaa7f53bc4f35ee9da8b3",
-                "sha256:bc3af051d7d14b2ee5ef9969666def0cd1a000e121eaea580d4a313df4b37f32"
-            ],
-            "version": "==1.1.1"
-        },
->>>>>>> Stashed changes
-=======
->>>>>>> edd08327c56912cb430f326f84649da5c8e41da2
         "isort": {
             "hashes": [
                 "sha256:6f62d78e2f89b4500b080fe3a81690850cd254227f27f75c3a0c491a1f351ba7",
@@ -328,19 +304,6 @@
             "index": "pypi",
             "version": "==2.20.0"
         },
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-        "py": {
-            "hashes": [
-                "sha256:51c75c4126074b472f746a24399ad32f6053d1b34b68d2fa41e558e6f4a98719",
-                "sha256:607c53218732647dff4acdfcd50cb62615cedf612e72d1724fb1a0cc6405b378"
-            ],
-            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'",
-            "version": "==1.11.0"
-        },
-=======
->>>>>>> edd08327c56912cb430f326f84649da5c8e41da2
         "pyparsing": {
             "hashes": [
                 "sha256:2b020ecf7d21b687f219b71ecad3631f644a47f01403fa1d1036b0c6416d70fb",
@@ -349,18 +312,6 @@
             "markers": "python_full_version >= '3.6.8'",
             "version": "==3.0.9"
         },
-<<<<<<< HEAD
-        "pytest": {
-            "hashes": [
-                "sha256:1377bda3466d70b55e3f5cecfa55bb7cfcf219c7964629b967c37cf0bda818b7",
-                "sha256:4f365fec2dff9c1162f834d9f18af1ba13062db0c708bf7b946f8a5c76180c39"
-            ],
-            "index": "pypi",
-            "version": "==7.1.3"
-        },
->>>>>>> Stashed changes
-=======
->>>>>>> edd08327c56912cb430f326f84649da5c8e41da2
         "python-dotenv": {
             "hashes": [
                 "sha256:1684eb44636dd462b66c3ee016599815514527ad99965de77f43e0944634a7e5",
